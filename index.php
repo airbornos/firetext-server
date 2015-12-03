@@ -11,26 +11,26 @@ if (isset($_POST) && !empty($_POST)) {
 		
 		// Dropbox config
 		$firetextVariables["services"]["dropbox"] = [
-			"authURL": "https://firetext-server.herokuapp.com/auth/dropbox/oauth2/",
-			"apiKey": "p8qpg4ai84mfayx"
+			"authURL"=>"https://firetext-server.herokuapp.com/auth/dropbox/oauth2/",
+			"apiKey"=>"p8qpg4ai84mfayx"
 		];
 		
 		// Splunk config
 		$firetextVariables["services"]["splunk"] = [
-			"apiKey": ""
+			"apiKey"=>""
 		];
 		
 		// In-app urls
 		$firetextVariables["urls"] = [
 					[
-						"name": "rate",
-						"url": "https://marketplace.firefox.com/app/firetext/ratings/add",
-						"category": "app_actions"
+						"name"=>"rate",
+						"url"=>"https://marketplace.firefox.com/app/firetext/ratings/add",
+						"category"=>"app_actions"
 					],
 					[
-						"name": "support",
-						"url": "https://support.mozilla.com/",
-						"category": "help"
+						"name"=>"support",
+						"url"=>"https://support.mozilla.com/",
+						"category"=>"help"
 					]
 				];
 		
@@ -38,9 +38,9 @@ if (isset($_POST) && !empty($_POST)) {
 		$firetextVariables["notifications"] = [];
 		if($_POST["locale"] == "en-US") {
 			array_push($firetextVariables["notifications"],[
-				"name": "test",
-				"content": "want-feedback",
-				"repeat": 2
+				"name"=>"test",
+				"content"=>"want-feedback",
+				"repeat"=>2
 			]);
 		}
 	
