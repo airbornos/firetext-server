@@ -69,4 +69,6 @@ if (isset($_POST) && !empty($_POST)) {
 		echo json_encode($urls);
 		exit;
 	}
+} else {
+	echo "Firetext server";
 }
