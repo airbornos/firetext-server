@@ -31,12 +31,17 @@ if (isset($_POST) && !empty($_POST)) {
 						"name"=>"support",
 						"url"=>"https://support.mozilla.com/",
 						"category"=>"help"
+					],
+					[
+						"name"=>"test",
+						"url"=>"http://firefox.com",
+						"category"=>""
 					]
 				];
 		
 		// Notifications
 		$firetextVariables["notifications"] = [];
-		if($_POST["locale"] == "en-US") {
+		if($_POST["locale"] == "en") {
 			array_push($firetextVariables["notifications"],[
 				"name"=>"test",
 				"content"=>"want-feedback",
