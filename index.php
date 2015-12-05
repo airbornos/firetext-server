@@ -22,32 +22,12 @@ if (isset($_POST) && !empty($_POST)) {
 		
 		// In-app urls
 		$firetextVariables["urlCategories"] = [
-					[
-						"id"=>"app_actions",
-						"name"=>"App actions"
-					],
-					[
-						"id"=>"help",
-						"name"=>"Help"
-					]
 				];
 		$firetextVariables["urls"] = [
 					[
-						"id"=>"rate",
+						"id"=>"rate-firetext",
 						"name"=>"Rate Firetext",
 						"url"=>"https://marketplace.firefox.com/app/firetext/ratings/add",
-						"category"=>"app_actions"
-					],
-					[
-						"id"=>"support",
-						"name"=>"Mozilla Support",
-						"url"=>"https://support.mozilla.com/",
-						"category"=>"help"
-					],
-					[
-						"id"=>"test",
-						"name"=>"Test url",
-						"url"=>"http://firefox.com",
 						"category"=>""
 					]
 				];
