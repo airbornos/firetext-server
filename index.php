@@ -1,7 +1,7 @@
 <?php
 
-if (isset($_POST) && !empty($_POST)) {
-	if($_POST['request']=='firetext_variables'){
+if ((isset($_POST) && !empty($_POST)) or (isset($_GET) && !empty($_GET))) {
+	if($_GET['request']=='firetext_variables'){
 		// Firetext 0.5+
 		// Variable container
 		$firetextVariables = [];
