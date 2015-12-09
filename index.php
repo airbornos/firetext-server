@@ -10,15 +10,19 @@ if ((isset($_POST) && !empty($_POST)) or (isset($_GET) && !empty($_GET))) {
 		$firetextVariables["services"] = [];
 		
 		// Dropbox config
-		$firetextVariables["services"]["dropbox"] = [
-			"authURL"=>"https://firetext-server.herokuapp.com/auth/dropbox/oauth2/",
-			"apiKey"=>"p8qpg4ai84mfayx"
-		];
+		if (isset($_ENV['dropboxKey'])) {
+			$firetextVariables["services"]["dropbox"] = [
+				"authURL"=>"https://firetext-server.herokuapp.com/auth/dropbox/oauth2/",
+				"apiKey"=>$_ENV['dropboxKey']
+			];			
+		}
 		
 		// Splunk config
-		$firetextVariables["services"]["splunk"] = [
-			"apiKey"=>""
-		];
+		if (isset($_ENV['splunkKey'])) {
+			$firetextVariables["services"]["splunk"] = [
+				"apiKey"=>$_ENV['splunkKey']
+			];
+		}
 		
 		// In-app urls
 		$firetextVariables["urlCategories"] = [
