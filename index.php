@@ -12,7 +12,7 @@ if ((isset($_POST) && !empty($_POST)) or (isset($_GET) && !empty($_GET))) {
 		// Dropbox config
 		if (isset($_ENV['dropboxKey'])) {
 			$firetextVariables["services"]["dropbox"] = [
-				"authURL"=>"https://firetext-server.herokuapp.com/auth/dropbox/oauth2/",
+				"authURL"=>"https://firetext.herokuapp.com/auth/dropbox/oauth2/",
 				"apiKey"=>$_ENV['dropboxKey']
 			];			
 		}
@@ -54,7 +54,7 @@ if ((isset($_POST) && !empty($_POST)) or (isset($_GET) && !empty($_GET))) {
 	} else if($_POST['request']=='urls') {
 		// Firetext 0.4-
 		// Dropbox config
-		$dropboxURL = 'https://firetext-server.herokuapp.com/auth/dropbox/';
+		$dropboxURL = 'https://firetext.herokuapp.com/auth/dropbox/';
 		
 		// Create variables
 		$urls = array(
